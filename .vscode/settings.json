@@ -1,5 +1,13 @@
 {
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+    "source.fixAll.format": true,
+    "source.organizeImports": true
+  },
   "search.exclude": {
+    "**/dist": true,
     "**/.yarn": true,
     "**/.pnp.*": true
   },
