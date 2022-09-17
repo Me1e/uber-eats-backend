@@ -1,8 +1,8 @@
 {
   "name": "uber-eats-backend",
   "version": "0.0.1",
-  "description": "",
-  "author": "",
+  "description": "Uber Eats Clone Backend",
+  "author": "Me1e",
   "private": true,
   "license": "UNLICENSED",
   "scripts": {
