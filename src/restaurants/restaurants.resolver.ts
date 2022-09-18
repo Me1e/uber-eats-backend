@@ -18,7 +18,6 @@ export class RestaurantsResolver {
     createRestaurantDto: CreateRestaurantDto,
   ): boolean {
     console.log(createRestaurantDto);
-
     return true;
   }
 }
