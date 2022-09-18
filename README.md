@@ -1,1 +1,1 @@
-# Graphql, TypeORM 학습을 위한 토이프로젝트
+# [Graphql, TypeORM, Postgres] 학습을 위한 토이프로젝트
