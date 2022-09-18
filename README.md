@@ -1,3 +1,1 @@
-# Uber Eats Clone
-
-우버 이츠 클론 백엔드
+# [Graphql, TypeORM, Postgres] 학습을 위한 토이프로젝트
