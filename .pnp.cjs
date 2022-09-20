@@ -76,7 +76,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:10.9.1"],\
             ["tsconfig-paths", "npm:4.1.0"],\
             ["typeorm", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:0.3.9"],\
-            ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"]\
+            ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"],\
+            ["uuid", "npm:9.0.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -11217,7 +11218,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["ts-node", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:10.9.1"],\
             ["tsconfig-paths", "npm:4.1.0"],\
             ["typeorm", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:0.3.9"],\
-            ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"]\
+            ["typescript", "patch:typescript@npm%3A4.8.3#~builtin<compat/typescript>::version=4.8.3&hash=a1c5e5"],\
+            ["uuid", "npm:9.0.0"]\
           ],\
           "linkType": "SOFT"\
         }]\
@@ -11351,6 +11353,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/uuid-npm-8.3.2-eca0baba53-5575a8a75c.zip/node_modules/uuid/",\
           "packageDependencies": [\
             ["uuid", "npm:8.3.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:9.0.0", {\
+          "packageLocation": "./.yarn/cache/uuid-npm-9.0.0-46c41e3e43-8dd2c83c43.zip/node_modules/uuid/",\
+          "packageDependencies": [\
+            ["uuid", "npm:9.0.0"]\
           ],\
           "linkType": "HARD"\
         }]\
