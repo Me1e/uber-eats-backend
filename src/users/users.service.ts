@@ -66,7 +66,7 @@ export class UsersService {
       const token = this.jwtService.sign({ id: user.id });
       return { ok: true, token };
     } catch (e) {
-      return { ok: false, error: "Can't log user in." };
+      return { ok: false, error: 'Could not log in' };
     }
   }
 

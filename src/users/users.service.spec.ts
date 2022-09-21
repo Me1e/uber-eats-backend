@@ -14,7 +14,7 @@ const mockRepository = () => ({
 });
 
 const mockJwtService = {
-  sign: jest.fn(),
+  sign: jest.fn(() => 'signed-token-baby'),
   verify: jest.fn(),
 };
 
@@ -27,10 +27,11 @@ type MockRepository<T = any> = Partial<Record<keyof Repository<T>, jest.Mock>>;
 describe('UsersService', () => {
   let service: UsersService;
   let mailService: MailService;
+  let jwtService: JwtService;
   let usersRepository: MockRepository<User>;
   let verificationsRepository: MockRepository<Verification>;
 
-  beforeAll(async () => {
+  beforeEach(async () => {
     const module: TestingModule = await Test.createTestingModule({
       providers: [
         UsersService,
@@ -54,6 +55,7 @@ describe('UsersService', () => {
     }).compile();
     service = module.get<UsersService>(UsersService);
     mailService = module.get<MailService>(MailService);
+    jwtService = module.get<JwtService>(JwtService);
     usersRepository = module.get(getRepositoryToken(User));
     verificationsRepository = module.get(getRepositoryToken(Verification));
   });
@@ -64,8 +66,8 @@ describe('UsersService', () => {
 
   describe('createAccount', () => {
     const createAccountArgs = {
-      email: '',
-      password: '',
+      email: 'email',
+      password: 'password',
       role: 0,
     };
 
@@ -125,6 +127,50 @@ describe('UsersService', () => {
         ok: false,
         error: "Couldn't create account",
       });
+    });
+  });
+
+  describe('login', () => {
+    const loginArgs = {
+      email: 'email',
+      password: 'password',
+    };
+
+    it('should fail if user does not exist', async () => {
+      usersRepository.findOne.mockResolvedValue(null);
+      const result = await service.login(loginArgs);
+      expect(usersRepository.findOne).toHaveBeenCalledTimes(1);
+      // expect(usersRepository.findOne).toHaveBeenCalledWith(
+      //   expect.any(Object),
+      //   expect.any(Object),
+      // );
+      expect(result).toMatchObject({ ok: false, error: 'User not found' });
+    });
+    it('should fail if the password is wrong', async () => {
+      const mockedUser = {
+        checkPassword: jest.fn(() => Promise.resolve(false)),
+      };
+      usersRepository.findOne.mockResolvedValue(mockedUser);
+      const result = await service.login(loginArgs);
+      expect(result).toMatchObject({ ok: false, error: 'Wrong password' });
+    });
+    it('should return token if password correct', async () => {
+      const mockedUser = {
+        id: 1,
+        checkPassword: jest.fn(() => Promise.resolve(true)),
+      };
+      usersRepository.findOne.mockResolvedValue(mockedUser);
+      const result = await service.login(loginArgs);
+
+      expect(jwtService.sign).toHaveBeenCalledTimes(1);
+      // expect(jwtService.sign).toHaveBeenCalledWith(expect.any(Number));
+
+      expect(result).toMatchObject({ ok: true, token: 'signed-token-baby' });
+    });
+    it('should fail on exception', async () => {
+      usersRepository.findOne.mockRejectedValue(new Error());
+      const result = await service.login(loginArgs);
+      expect(result).toMatchObject({ ok: false, error: 'Could not log in' });
     });
   });
 
