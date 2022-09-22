@@ -11,11 +11,7 @@ export class MailService {
     private readonly options: MailModuleOptions,
   ) {}
 
-  private async sendEmail(
-    subject: string,
-    template: string,
-    emailVars: EmailVar[],
-  ) {
+  async sendEmail(subject: string, template: string, emailVars: EmailVar[]) {
     const form = new FromData();
     form.append('from', `우버 이츠 <mailgun@${this.options.domain}>`);
     form.append('to', 'mele0404@naver.com');
