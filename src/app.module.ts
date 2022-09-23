@@ -11,6 +11,7 @@ import * as Joi from 'joi';
 import { JwtMiddleware } from './jwt/jwt.middleware';
 import { JwtModule } from './jwt/jwt.module';
 import { MailModule } from './mail/mail.module';
+import { RestaurantsModule } from './restaurants/restaurants.module';
 import { UsersModule } from './users/users.module';
 @Module({
   imports: [
@@ -55,6 +56,7 @@ import { UsersModule } from './users/users.module';
       fromEmail: process.env.MAILGUN_FROM_EMAIL,
     }),
     UsersModule,
+    RestaurantsModule,
   ],
   controllers: [],
   providers: [],
