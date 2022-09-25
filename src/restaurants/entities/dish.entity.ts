@@ -18,8 +18,8 @@ class DishChoice {
 class DishOption {
   @Field(() => String)
   name: string;
-  @Field(() => [String], { nullable: true })
-  choices?: string[];
+  @Field(() => [DishChoice], { nullable: true })
+  choices?: DishChoice[];
   @Field(() => Number)
   extra: number;
 }
