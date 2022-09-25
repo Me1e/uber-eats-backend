@@ -4,7 +4,7 @@ import { provideCustomRepository } from 'src/common/util/custom-repository.util'
 import { Category } from './entities/category.entity';
 import { Restaurant } from './entities/restaurant.entity';
 import { CategoryRepository } from './repositoryies/category.repository';
-import { RestaurantsResolver } from './restaurants.resolver';
+import { CategoryResolver, RestaurantsResolver } from './restaurants.resolver';
 import { RestaurantsService } from './restaurants.service';
 
 @Module({
@@ -12,6 +12,7 @@ import { RestaurantsService } from './restaurants.service';
   providers: [
     RestaurantsResolver,
     RestaurantsService,
+    CategoryResolver,
     provideCustomRepository(Category, CategoryRepository),
   ],
 })
