@@ -1,6 +1,5 @@
 import {
   Args,
-  Int,
   Mutation,
   Parent,
   Query,
@@ -11,6 +10,7 @@ import { AuthUser } from 'src/auth/auth-user.decorator';
 import { Role } from 'src/auth/role.decorator';
 import { User } from 'src/users/entities/user.entity';
 import { AllCategoriesOutput } from './dtos/all-categories.dto';
+import { CategoryInput, CategoryOutput } from './dtos/category.dto';
 import {
   CreateRestaurantInput,
   CreateRestaurantOutput,
@@ -75,7 +75,7 @@ export class RestaurantsResolver {
 export class CategoryResolver {
   constructor(private readonly restaurantsService: RestaurantsService) {}
 
-  @ResolveField(() => Int)
+  @ResolveField(() => Number)
   restaurantCount(
     @Parent()
     category: Category,
@@ -86,5 +86,13 @@ export class CategoryResolver {
   @Query(() => AllCategoriesOutput)
   allCategories(): Promise<AllCategoriesOutput> {
     return this.restaurantsService.allCategories();
+  }
+
+  @Query(() => CategoryOutput)
+  category(
+    @Args('input')
+    categoryInput: CategoryInput,
+  ): Promise<CategoryOutput> {
+    return this.restaurantsService.findCategoryBySlug(categoryInput);
   }
 }
