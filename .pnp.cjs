@@ -63,6 +63,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["form-data", "npm:4.0.0"],\
             ["got", "npm:11.8.5"],\
             ["graphql", "npm:15.8.0"],\
+            ["graphql-subscriptions", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:2.0.0"],\
             ["jest", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:28.1.3"],\
             ["joi", "npm:17.6.0"],\
             ["jsonwebtoken", "npm:8.5.1"],\
@@ -6916,6 +6917,27 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           ],\
           "linkType": "SOFT"\
         }],\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/graphql-subscriptions-npm-2.0.0-53564d1c84-4735ef8646.zip/node_modules/graphql-subscriptions/",\
+          "packageDependencies": [\
+            ["graphql-subscriptions", "npm:2.0.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:2.0.0", {\
+          "packageLocation": "./.yarn/__virtual__/graphql-subscriptions-virtual-605b01af60/0/cache/graphql-subscriptions-npm-2.0.0-53564d1c84-4735ef8646.zip/node_modules/graphql-subscriptions/",\
+          "packageDependencies": [\
+            ["graphql-subscriptions", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:2.0.0"],\
+            ["@types/graphql", null],\
+            ["graphql", "npm:15.8.0"],\
+            ["iterall", "npm:1.3.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/graphql",\
+            "graphql"\
+          ],\
+          "linkType": "HARD"\
+        }],\
         ["virtual:92097141306a5d32b402bf76a561230dd7e5192d9baf5e35e22d854335d5e2580f6019fdf9ec5e1c2e23b5256a3bbf3f5175e426b098858477b31b4d62086423#npm:1.2.1", {\
           "packageLocation": "./.yarn/__virtual__/graphql-subscriptions-virtual-2cece90fb2/0/cache/graphql-subscriptions-npm-1.2.1-6f6629f38d-2b9533c677.zip/node_modules/graphql-subscriptions/",\
           "packageDependencies": [\
@@ -11443,6 +11465,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["form-data", "npm:4.0.0"],\
             ["got", "npm:11.8.5"],\
             ["graphql", "npm:15.8.0"],\
+            ["graphql-subscriptions", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:2.0.0"],\
             ["jest", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:28.1.3"],\
             ["joi", "npm:17.6.0"],\
             ["jsonwebtoken", "npm:8.5.1"],\
