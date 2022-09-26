@@ -40,6 +40,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/core", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:9.0.11"],\
             ["@nestjs/graphql", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:8.0.2"],\
             ["@nestjs/platform-express", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:9.0.11"],\
+            ["@nestjs/schedule", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:2.1.0"],\
             ["@nestjs/schematics", "virtual:5b213dc3c87785bc31567beb1d423d30e9529ccc47b8149c74525f8b58d7e5de05f4f6a73724af55159cda94c4d39cf72f935b54194efc55c6a98f34c42e08cf#npm:9.0.3"],\
             ["@nestjs/testing", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:9.0.11"],\
             ["@nestjs/typeorm", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:9.0.1"],\
@@ -2297,6 +2298,38 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "@nestjs/core",\
             "@types/nestjs__common",\
             "@types/nestjs__core"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@nestjs/schedule", [\
+        ["npm:2.1.0", {\
+          "packageLocation": "./.yarn/cache/@nestjs-schedule-npm-2.1.0-449b2dd194-43423eb049.zip/node_modules/@nestjs/schedule/",\
+          "packageDependencies": [\
+            ["@nestjs/schedule", "npm:2.1.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:2.1.0", {\
+          "packageLocation": "./.yarn/__virtual__/@nestjs-schedule-virtual-16e04ddce2/0/cache/@nestjs-schedule-npm-2.1.0-449b2dd194-43423eb049.zip/node_modules/@nestjs/schedule/",\
+          "packageDependencies": [\
+            ["@nestjs/schedule", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:2.1.0"],\
+            ["@nestjs/common", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:9.0.11"],\
+            ["@nestjs/core", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:9.0.11"],\
+            ["@types/nestjs__common", null],\
+            ["@types/nestjs__core", null],\
+            ["@types/reflect-metadata", null],\
+            ["cron", "npm:2.0.0"],\
+            ["reflect-metadata", "npm:0.1.13"],\
+            ["uuid", "npm:8.3.2"]\
+          ],\
+          "packagePeers": [\
+            "@nestjs/common",\
+            "@nestjs/core",\
+            "@types/nestjs__common",\
+            "@types/nestjs__core",\
+            "@types/reflect-metadata",\
+            "reflect-metadata"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -5402,6 +5435,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/create-require-npm-1.1.1-839884ca2e-a9a1503d43.zip/node_modules/create-require/",\
           "packageDependencies": [\
             ["create-require", "npm:1.1.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["cron", [\
+        ["npm:2.0.0", {\
+          "packageLocation": "./.yarn/cache/cron-npm-2.0.0-9580454639-179ec137ad.zip/node_modules/cron/",\
+          "packageDependencies": [\
+            ["cron", "npm:2.0.0"],\
+            ["luxon", "npm:1.28.0"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -8678,6 +8721,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["luxon", [\
+        ["npm:1.28.0", {\
+          "packageLocation": "./.yarn/cache/luxon-npm-1.28.0-51c0607a71-5250cb9f13.zip/node_modules/luxon/",\
+          "packageDependencies": [\
+            ["luxon", "npm:1.28.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["macos-release", [\
         ["npm:2.5.0", {\
           "packageLocation": "./.yarn/cache/macos-release-npm-2.5.0-1856dc5241-57379ba354.zip/node_modules/macos-release/",\
@@ -11442,6 +11494,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@nestjs/core", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:9.0.11"],\
             ["@nestjs/graphql", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:8.0.2"],\
             ["@nestjs/platform-express", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:9.0.11"],\
+            ["@nestjs/schedule", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:2.1.0"],\
             ["@nestjs/schematics", "virtual:5b213dc3c87785bc31567beb1d423d30e9529ccc47b8149c74525f8b58d7e5de05f4f6a73724af55159cda94c4d39cf72f935b54194efc55c6a98f34c42e08cf#npm:9.0.3"],\
             ["@nestjs/testing", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:9.0.11"],\
             ["@nestjs/typeorm", "virtual:6c61f539235ccd0ee8c26b781276db8017a556eed4fa30d40a021d12b2ea506bad78dcba2fd9a10d42eeff9a119146f68fd54a17a1d14187cf471f7b69ddecba#npm:9.0.1"],\
