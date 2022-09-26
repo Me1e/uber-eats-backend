@@ -10,6 +10,7 @@ import { MailModule } from './mail/mail.module';
 import { OrdersModule } from './orders/orders.module';
 import { RestaurantsModule } from './restaurants/restaurants.module';
 import { UsersModule } from './users/users.module';
+import { PaymentsModule } from './payments/payments.module';
 @Module({
   imports: [
     ConfigModule.forRoot({
@@ -63,6 +64,7 @@ import { UsersModule } from './users/users.module';
     RestaurantsModule,
     OrdersModule,
     CommonModule,
+    PaymentsModule,
   ],
   controllers: [],
   providers: [],
