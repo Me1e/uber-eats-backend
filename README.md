@@ -5,6 +5,6 @@
 + Unit test
 + E2E test
 + Subscription
-+ yarn berry zero install
++ yarn berry
 + PostgresDB
 + JWT auth
